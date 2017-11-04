@@ -25,6 +25,7 @@ ratings:
 exclude_paths:
 - "**/__tests__/**"
 - "**/__snapshots__/**"
+- "src/api-server/**"
 - "src/index.js"
 - "src/registerServiceWorker.js"
 - "src/setupTests.js"
