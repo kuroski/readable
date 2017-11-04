@@ -1,3 +1,14 @@
+[![Build Status](https://travis-ci.org/kuroski/readable.svg?branch=master)](https://travis-ci.org/kuroski/readable)
+[![Code Climate](https://codeclimate.com/github/kuroski/readable/badges/gpa.svg)](https://codeclimate.com/github/kuroski/readable)
+[![Test Coverage](https://codeclimate.com/github/kuroski/readable/badges/coverage.svg)](https://codeclimate.com/github/kuroski/readable/coverage)
+[![Dependency Status](https://david-dm.org/kuroski/readable/status.svg)](https://david-dm.org/kuroski/readable#info=dependencies)
+[![devDependency Status](https://david-dm.org/kuroski/readable/dev-status.svg)](https://david-dm.org/kuroski/readable#info=devDependencies)
+
+# Readable Project
+
+A content and comment web app
+Second Udacity React Project
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
