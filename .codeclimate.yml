@@ -33,7 +33,6 @@ exclude_paths:
 - "common/**"
 - "docs/**"
 - "public/**"
-- "src/icons/**"
 - "**.md"
 - "yarn.lock"
 - "package.json"

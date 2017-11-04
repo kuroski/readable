@@ -10,11 +10,9 @@ import registerServiceWorker from './registerServiceWorker';
 T.setTexts(require('./i18n/en.json'));
 
 ReactDOM.render(
-  <BrowserRouter>
-    <ErrorBoundary>
-      <App />
-    </ErrorBoundary>
-  </BrowserRouter>,
+  <ErrorBoundary>
+    <App />
+  </ErrorBoundary>,
   document.getElementById('root')
 );
 registerServiceWorker();
