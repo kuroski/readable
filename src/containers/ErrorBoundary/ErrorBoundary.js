@@ -1,12 +1,12 @@
 import React from 'react';
-import createReactClass from 'create-react-class'
+import createReactClass from 'create-react-class';
 import T from 'i18n-react';
 
 const ErrorBoundary = createReactClass({
   getInitialState: function() {
     return {
       hasError: false
-    }
+    };
   },
 
   componentDidCatch: function(error, info) {

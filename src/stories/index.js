@@ -1,13 +1,22 @@
 import React from 'react';
-
 import { storiesOf } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
-import { linkTo } from '@storybook/addon-links';
+import CategoriesBar from '../components/CategoriesBar/CategoriesBar';
 
-import { Button, Welcome } from '@storybook/react/demo';
+const categories = [
+  {
+    name: 'react',
+    path: 'react'
+  },
+  {
+    name: 'redux',
+    path: 'redux'
+  },
+  {
+    name: 'udacity',
+    path: 'udacity'
+  }
+];
 
-storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo('Button')} />);
-
-storiesOf('Button', module)
-  .add('with text', () => <Button onClick={action('clicked')}>Hello Button</Button>)
-  .add('with some emoji', () => <Button onClick={action('clicked')}>😀 😎 👍 💯</Button>);
+storiesOf('CategoriesBar', module)
+  .add('With some categories', () => <CategoriesBar categories={categories} />)
+  .add('With no categories', () => <CategoriesBar categories={[]} />);

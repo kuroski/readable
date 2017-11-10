@@ -1,9 +1,27 @@
-import React, { Component } from 'react';
+import React from 'react';
+import createReactClass from 'create-react-class';
 import logo from './logo.svg';
 import './App.css';
 
-class App extends Component {
-  render() {
+const App = createReactClass({
+  getInitialState: () => ({
+    categories: [
+      {
+        name: 'react',
+        path: 'react'
+      },
+      {
+        name: 'redux',
+        path: 'redux'
+      },
+      {
+        name: 'udacity',
+        path: 'udacity'
+      }
+    ]
+  }),
+
+  render: function() {
     return (
       <div className="App">
         <header className="App-header">
@@ -16,6 +34,6 @@ class App extends Component {
       </div>
     );
   }
-}
+});
 
 export default App;

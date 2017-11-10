@@ -2,8 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import T from 'i18n-react';
 import './index.css';
-import App from './containers/App';
-import ErrorBoundary from './containers/ErrorBoundary';
+import App from './containers/App/App';
+import ErrorBoundary from './containers/ErrorBoundary/ErrorBoundary';
 import registerServiceWorker from './registerServiceWorker';
 
 // TODO: Logic to fetch locale by browser config
