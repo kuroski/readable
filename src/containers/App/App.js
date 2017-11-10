@@ -1,5 +1,6 @@
 import React from 'react';
 import createReactClass from 'create-react-class';
+import { Route } from 'react-router-dom';
 import logo from './logo.svg';
 import './App.css';
 
@@ -31,6 +32,12 @@ const App = createReactClass({
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
+        <Route exact path="/" render={() => <h1>Olá mundo</h1>} />
+
+        <Route
+          path="/categories/:slug"
+          render={({ match }) => <div>Categoria: {match.params.slug}</div>}
+        />
       </div>
     );
   }

@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import T from 'i18n-react';
+import { BrowserRouter } from 'react-router-dom';
 import './index.css';
 import App from './containers/App/App';
 import ErrorBoundary from './containers/ErrorBoundary/ErrorBoundary';
@@ -10,9 +11,11 @@ import registerServiceWorker from './registerServiceWorker';
 T.setTexts(require('./i18n/en.json'));
 
 ReactDOM.render(
-  <ErrorBoundary>
-    <App />
-  </ErrorBoundary>,
+  <BrowserRouter>
+    <ErrorBoundary>
+      <App />
+    </ErrorBoundary>
+  </BrowserRouter>,
   document.getElementById('root')
 );
 registerServiceWorker();
