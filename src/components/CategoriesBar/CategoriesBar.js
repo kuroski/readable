@@ -7,16 +7,17 @@ import './CategoriesBar.css';
 const CategoriesBar = createReactClass({
   render: function() {
     return (
-      <div>
-        CategoriesBar -
-        <ul>
-          {this.props.categories.map(category => (
-            <li key={category.name}>
-              <Link to={category.path}>{category.name}</Link>
-            </li>
-          ))}
-        </ul>
-      </div>
+      <nav className="categories-bar">
+        {this.props.categories.map(category => (
+          <Link
+            key={category.path}
+            to={`categories/${category.path}`}
+            className="categories-bar__link"
+          >
+            {category.name}
+          </Link>
+        ))}
+      </nav>
     );
   }
 });

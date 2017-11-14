@@ -27,6 +27,31 @@ exports[`renders without crashing 1`] = `
     </code>
      and save to reload.
   </p>
+  <nav
+    className="categories-bar"
+  >
+    <a
+      className="categories-bar__link"
+      href="categories/react"
+      onClick={[Function]}
+    >
+      react
+    </a>
+    <a
+      className="categories-bar__link"
+      href="categories/redux"
+      onClick={[Function]}
+    >
+      redux
+    </a>
+    <a
+      className="categories-bar__link"
+      href="categories/udacity"
+      onClick={[Function]}
+    >
+      udacity
+    </a>
+  </nav>
   <h1>
     Olá mundo
   </h1>
