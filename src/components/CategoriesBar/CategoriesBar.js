@@ -6,6 +6,8 @@ import './CategoriesBar.css';
 
 const CategoriesBar = createReactClass({
   render: function() {
+    console.log('=====');
+    console.log(this.props);
     return (
       <nav className="categories-bar">
         {this.props.categories.map(category => (

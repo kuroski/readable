@@ -1,10 +1,13 @@
 import React from 'react';
+import { Provider } from 'react-redux';
 import ReactDOM from 'react-dom';
 import T from 'i18n-react';
-import { BrowserRouter } from 'react-router-dom';
+
 import 'normalize.css';
 import './index.css';
-import App from './containers/App/App';
+
+import store from './store';
+import Routes from './routes';
 import ErrorBoundary from './containers/ErrorBoundary/ErrorBoundary';
 import registerServiceWorker from './registerServiceWorker';
 
@@ -12,11 +15,11 @@ import registerServiceWorker from './registerServiceWorker';
 T.setTexts(require('./i18n/en.json'));
 
 ReactDOM.render(
-  <BrowserRouter>
+  <Provider store={store}>
     <ErrorBoundary>
-      <App />
+      <Routes />
     </ErrorBoundary>
-  </BrowserRouter>,
+  </Provider>,
   document.getElementById('root')
 );
 registerServiceWorker();
