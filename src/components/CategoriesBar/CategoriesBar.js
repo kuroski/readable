@@ -1,23 +1,29 @@
 import React from 'react';
 import createReactClass from 'create-react-class';
-import Link from 'react-router-dom/Link';
+import NavLink from 'react-router-dom/NavLink';
 import PropTypes from 'prop-types';
-import './CategoriesBar.css';
+import { Container, Menu } from 'semantic-ui-react';
 
 const CategoriesBar = createReactClass({
   render: function() {
     return (
-      <nav className="categories-bar">
-        {this.props.categories.map(category => (
-          <Link
-            key={category.path}
-            to={`categories/${category.path}`}
-            className="categories-bar__link"
-          >
-            {category.name}
-          </Link>
-        ))}
-      </nav>
+      <Menu fixed="top" inverted>
+        <Container>
+          <Menu.Item as={NavLink} to="/" name="home" header>
+            Readable
+          </Menu.Item>
+          {this.props.categories.map(category => (
+            <Menu.Item
+              as={NavLink}
+              to={`/categories/${category.path}`}
+              name={category.path}
+              key={category.path}
+            >
+              {category.name}
+            </Menu.Item>
+          ))}
+        </Container>
+      </Menu>
     );
   }
 });

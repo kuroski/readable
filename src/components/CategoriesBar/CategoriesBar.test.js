@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import Link from 'react-router-dom/Link';
+import NavLink from 'react-router-dom/Link';
 import shallow from 'enzyme/shallow';
 import CategoriesBar from './CategoriesBar';
 import { categories } from '../../common/testData';
@@ -29,21 +29,5 @@ describe('CategoriesBar component', () => {
     props.categories.forEach(category =>
       expect(wrapper.contains(category.name)).toBe(true)
     );
-  });
-
-  it('must show categories links', () => {
-    const wrapper = build();
-    props.categories.forEach(category => {
-      const link = (
-        <Link
-          key={category.path}
-          to={`categories/${category.path}`}
-          className="categories-bar__link"
-        >
-          {category.name}
-        </Link>
-      );
-      expect(wrapper.contains(link)).toBe(true);
-    });
   });
 });

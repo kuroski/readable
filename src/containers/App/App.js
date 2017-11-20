@@ -1,8 +1,8 @@
 import React from 'react';
 import createReactClass from 'create-react-class';
-import { Route } from 'react-router-dom';
 import CategoriesBar from '../../components/CategoriesBar/CategoriesBar';
-import logo from './logo.svg';
+import { Container } from 'semantic-ui-react';
+import { Route } from 'react-router-dom';
 import './App.css';
 
 const App = createReactClass({
@@ -26,20 +26,15 @@ const App = createReactClass({
   render: function() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
         <CategoriesBar categories={this.state.categories} />
-        <Route exact path="/" render={() => <h1>Olá mundo</h1>} />
+        <Container text style={{ marginTop: '7em' }}>
+          <Route exact path="/" render={() => <h1>Olá mundo</h1>} />
 
-        <Route
-          path="/categories/:slug"
-          render={({ match }) => <div>Categoria: {match.params.slug}</div>}
-        />
+          <Route
+            path="/categories/:slug"
+            render={({ match }) => <div>Categoria: {match.params.slug}</div>}
+          />
+        </Container>
       </div>
     );
   }

@@ -4,56 +4,61 @@ exports[`renders without crashing 1`] = `
 <div
   className="App"
 >
-  <header
-    className="App-header"
+  <div
+    className="ui inverted top fixed menu"
   >
-    <img
-      alt="logo"
-      className="App-logo"
-      src="logo.svg"
-    />
-    <h1
-      className="App-title"
+    <div
+      className="ui container"
     >
-      Welcome to React
+      <a
+        aria-current="true"
+        className="header item active"
+        href="/"
+        onClick={[Function]}
+        style={Object {}}
+      >
+        Readable
+      </a>
+      <a
+        aria-current={false}
+        className="item"
+        href="/categories/react"
+        onClick={[Function]}
+        style={undefined}
+      >
+        react
+      </a>
+      <a
+        aria-current={false}
+        className="item"
+        href="/categories/redux"
+        onClick={[Function]}
+        style={undefined}
+      >
+        redux
+      </a>
+      <a
+        aria-current={false}
+        className="item"
+        href="/categories/udacity"
+        onClick={[Function]}
+        style={undefined}
+      >
+        udacity
+      </a>
+    </div>
+  </div>
+  <div
+    className="ui text container"
+    style={
+      Object {
+        "marginTop": "7em",
+      }
+    }
+  >
+    <h1>
+      Olá mundo
     </h1>
-  </header>
-  <p
-    className="App-intro"
-  >
-    To get started, edit 
-    <code>
-      src/App.js
-    </code>
-     and save to reload.
-  </p>
-  <nav
-    className="categories-bar"
-  >
-    <a
-      className="categories-bar__link"
-      href="categories/react"
-      onClick={[Function]}
-    >
-      react
-    </a>
-    <a
-      className="categories-bar__link"
-      href="categories/redux"
-      onClick={[Function]}
-    >
-      redux
-    </a>
-    <a
-      className="categories-bar__link"
-      href="categories/udacity"
-      onClick={[Function]}
-    >
-      udacity
-    </a>
-  </nav>
-  <h1>
-    Olá mundo
-  </h1>
+  </div>
 </div>
 `;

@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import T from 'i18n-react';
 import { BrowserRouter } from 'react-router-dom';
 import 'normalize.css';
-import './index.css';
+import 'semantic-ui-css/semantic.min.css';
 import App from './containers/App/App';
 import ErrorBoundary from './containers/ErrorBoundary/ErrorBoundary';
 import registerServiceWorker from './registerServiceWorker';
