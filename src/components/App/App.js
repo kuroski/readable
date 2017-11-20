@@ -3,10 +3,9 @@ import createReactClass from 'create-react-class';
 import CategoriesBar from '../../components/CategoriesBar/CategoriesBar';
 import { Container } from 'semantic-ui-react';
 import { withRouter } from 'react-router-dom';
-import { retrieveAll } from '../../reducers/categories';
+import { retrieveAll } from '../../core/actions/categories.action';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import './App.css';
 
 export const App = createReactClass({
   componentDidMount: function() {

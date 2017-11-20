@@ -1,0 +1,3 @@
+export default {
+  CATEGORIES_RETRIEVE_ALL: 'CATEGORIES_RETRIEVE_ALL'
+};

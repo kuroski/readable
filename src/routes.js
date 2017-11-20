@@ -2,10 +2,11 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { ConnectedRouter } from 'react-router-redux';
 
-import App from './containers/App/App';
+import App from './components/App/App';
+import { history } from './core/middlewares';
 
 const Routes = props => (
-  <ConnectedRouter history={props.history}>
+  <ConnectedRouter history={history}>
     <App>
       <Switch>
         <Route exact path="/" render={() => <h1>Olá mundo</h1>} />
