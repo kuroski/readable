@@ -19,33 +19,6 @@ exports[`renders without crashing 1`] = `
       >
         Readable
       </a>
-      <a
-        aria-current={false}
-        className="item"
-        href="/categories/react"
-        onClick={[Function]}
-        style={undefined}
-      >
-        react
-      </a>
-      <a
-        aria-current={false}
-        className="item"
-        href="/categories/redux"
-        onClick={[Function]}
-        style={undefined}
-      >
-        redux
-      </a>
-      <a
-        aria-current={false}
-        className="item"
-        href="/categories/udacity"
-        onClick={[Function]}
-        style={undefined}
-      >
-        udacity
-      </a>
     </div>
   </div>
   <div
@@ -55,10 +28,6 @@ exports[`renders without crashing 1`] = `
         "marginTop": "7em",
       }
     }
-  >
-    <h1>
-      Olá mundo
-    </h1>
-  </div>
+  />
 </div>
 `;

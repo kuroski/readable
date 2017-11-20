@@ -2,42 +2,35 @@ import React from 'react';
 import createReactClass from 'create-react-class';
 import CategoriesBar from '../../components/CategoriesBar/CategoriesBar';
 import { Container } from 'semantic-ui-react';
-import { Route } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
+import { retrieveAll } from '../../reducers/categories';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import './App.css';
 
-const App = createReactClass({
-  getInitialState: () => ({
-    categories: [
-      {
-        name: 'react',
-        path: 'react'
-      },
-      {
-        name: 'redux',
-        path: 'redux'
-      },
-      {
-        name: 'udacity',
-        path: 'udacity'
-      }
-    ]
-  }),
+export const App = createReactClass({
+  componentDidMount: function() {
+    this.props.retrieveAll();
+  },
 
   render: function() {
     return (
       <div className="App">
-        <CategoriesBar categories={this.state.categories} />
+        <CategoriesBar categories={this.props.categories} />
         <Container text style={{ marginTop: '7em' }}>
-          <Route exact path="/" render={() => <h1>Olá mundo</h1>} />
-
-          <Route
-            path="/categories/:slug"
-            render={({ match }) => <div>Categoria: {match.params.slug}</div>}
-          />
+          {this.props.children}
         </Container>
       </div>
     );
   }
 });
 
-export default App;
+const mapDispatchToProps = dispatch => {
+  return bindActionCreators({ retrieveAll }, dispatch);
+};
+
+const mapStateToProps = state => ({
+  categories: state.categories
+});
+
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));
