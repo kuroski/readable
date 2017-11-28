@@ -1,0 +1,3 @@
+export default {
+  POSTS_RETRIEVE_ALL: 'POSTS_RETRIEVE_ALL'
+};
